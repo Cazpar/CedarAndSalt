@@ -1,6 +1,7 @@
 ---
-title: "Services"
+title: "Services & Gallery | Cedar & Salt Landscape and Gardens"
 description: "Description of the services page"
+preloadImg: '/assets/images/desktop-final/landing.webp'
 permalink: 'services/'
 eleventyNavigation:
     key: Services
@@ -14,6 +15,25 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1106-1112">
+    <div class="cs-container">
+        <span class="cs-int-title">About Us</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/landing-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/landing.webp">
+        <img decoding="async" src="../../assets/images/desktop-final/landing.webp" alt="mechanic" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
 <!-- ============================================ -->
 <!--                   Gallery                    -->
 <!-- ============================================ -->
@@ -95,4 +115,74 @@ eleventyNavigation:
         </div>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-447">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Services</span>
+            <h2 class="cs-title">Landscape & Garden Services in Friday Harbor, WA, USA</h2>
+            <p class="cs-text">
+                Here are four of our most popular services. We offer a wide range of services, so if you don't see what you're looking for, please contact us.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-box">
+                    <h3 class="cs-h3">Landscape & Garden design and strategy </h3>
+                    <p class="cs-item-text">Our landscape & garden design and strategy services are tailored to your needs. We work with you to create a plan that suits your lifestyle and budget.
+                    </p>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaf.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaf.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaf.jpg" alt="leaf" width="345" height="428">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-box">
+                    <h3 class="cs-h3">Native plants, well-behaving specimen plants of interest</h3>
+                    <p class="cs-item-text">
+                        We specialize in native plants, well-behaving specimen plants of interest. We can help you choose the right plants for your garden and landscape.
+                    </p>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/grass.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/grass.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/grass.jpg" alt="grass" width="345" height="428">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-box">
+                    <h3 class="cs-h3">Removal of invasive plant species</h3>
+                    <p class="cs-item-text">
+                        We specialize in the removal of invasive plant species. We can help you identify and remove invasive plants from your garden and landscape.
+                    </p>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaves.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaves.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaves.jpg" alt="leaves" width="345" height="428">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-box">
+                    <h3 class="cs-h3">Landscape value and beauty enhancement</h3>
+                    <p class="cs-item-text">
+                        We specialize in landscape value and beauty enhancement. We can help you improve the value and beauty of your garden and landscape.
+                    </p>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/path.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/path.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/path.jpg" alt="path" width="345" height="428">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
 {% endblock %}
