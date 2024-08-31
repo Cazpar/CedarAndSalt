@@ -2,132 +2,6 @@
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjNPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 200;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4ejMPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4TbMPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjMPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4VrMPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4bbLPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4Y_LPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4ejLPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4cHLPrQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao4CP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEooCP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaooCP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoooCP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVsEpYCP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pYCP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtapYCP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v34/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpYCP.ttf) format('truetype');
-}
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
@@ -292,32 +166,15 @@
     left: 0;
     opacity: 0;
   }
-  /* roboto-regular - latin */
+  /* raleway-regular - latin */
   @font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Raleway';
     font-style: normal;
-    font-family: "Roboto";
     font-weight: 400;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-700 - latin */
-  @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-900 - latin */
-  @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url('../fonts/raleway-v34-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 }
 /* Reset Margins */
@@ -502,7 +359,7 @@ html {
     display: none;
   }
   #cs-navigation .cs-link {
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
     text-align: inherit;
     text-decoration: none;
@@ -920,7 +777,7 @@ html {
     /* prevents padding from adding to the width */
     box-sizing: border-box;
     padding: 0 1.5rem;
-    color: #fff;
+    color: #000;
     background-color: var(--primaryLight);
     border-radius: 0.25rem;
     display: inline-block;
@@ -1079,7 +936,8 @@ html {
     align-items: flex-start;
   }
   #cta-461 .cs-title,
-  #cta-461 .cs-text {
+  #cta-461 .cs-text,
+  #cta-461 .cs-topper {
     color: var(--bodyTextColorWhite);
   }
   #cta-461 .cs-text {
@@ -1336,7 +1194,7 @@ html {
     /* we remove the :before animated underline from the contact list and replace it with an underline.  The animated line doesn't work well on this section */
     width: 100%;
     max-width: 100%;
-    gap: 0.75rem;
+    gap: 1rem;
   }
   #cs-footer-710 .cs-contact-ul .cs-link:hover {
     text-decoration: underline;
@@ -1350,7 +1208,7 @@ html {
     display: block;
   }
   #cs-footer-710 .cs-header {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.2em;
     font-weight: 700;
     margin: 0 0 1.5rem 0;
@@ -1421,7 +1279,7 @@ html {
   }
   #cs-footer-710 .cs-nav-link {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
@@ -1495,7 +1353,7 @@ html {
   }
   #cs-footer-710 .cs-copyright {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
     line-height: 1.5em;
     text-align: center;
     width: 70%;

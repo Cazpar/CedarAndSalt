@@ -3,7 +3,6 @@
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
@@ -200,42 +199,13 @@
         opacity: 0;
     }
 
-    // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
-
-    /* roboto-regular - latin */
+    /* raleway-regular - latin */
     @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Raleway';
         font-style: normal;
-        font-family: "Roboto";
         font-weight: 400;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
-        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    /* roboto-700 - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 700;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
-        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    /* roboto-900 - latin */
-    @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 900;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
-        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: url('../fonts/raleway-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
 }
 
@@ -456,7 +426,7 @@ html {
         }
 
         .cs-link {
-            font-size: (14/16rem);
+            font-size: 1.2rem;
             line-height: 1.5em;
             text-align: inherit;
             text-decoration: none;
@@ -952,7 +922,7 @@ html {
             /* prevents padding from adding to the width */
             box-sizing: border-box;
             padding: 0 (24/16rem);
-            color: #fff;
+            color: #000;
             background-color: var(--primaryLight);
             border-radius: (4/16rem);
             display: inline-block;
@@ -1133,7 +1103,7 @@ html {
             align-items: flex-start;
         }
 
-        .cs-title, .cs-text {
+        .cs-title, .cs-text, .cs-topper {
             color: var(--bodyTextColorWhite);
         }
 
@@ -1424,7 +1394,7 @@ html {
             /* we remove the :before animated underline from the contact list and replace it with an underline.  The animated line doesn't work well on this section */
             width: 100%;
             max-width: 100%;
-            gap: (12/16rem);
+            gap: (16/16rem);
 
             .cs-link {
                 &:hover {
@@ -1443,7 +1413,7 @@ html {
         }
 
         .cs-header {
-            font-size: (16/16rem);
+            font-size: 1.2rem;
             line-height: 1.2em;
             font-weight: 700;
             margin: 0 0 (24/16rem) 0;
@@ -1525,7 +1495,7 @@ html {
 
         .cs-nav-link {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-size: clamp(0.875rem, 1.5vw, 1.5rem);
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
@@ -1612,7 +1582,7 @@ html {
 
         .cs-copyright {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-size: clamp(0.875rem, 1.5vw, 1.5rem);
             line-height: 1.5em;
             text-align: center;
             width: 70%;
