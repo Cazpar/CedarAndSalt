@@ -167,7 +167,7 @@
     text-align: center;
     margin: 0;
     border-radius: 1.25em;
-    color: var(--bodyTextColor);
+    color: #000;
     min-width: 12.5rem;
     padding: 0 1.5rem;
     background-color: var(--primaryLight);
@@ -228,7 +228,7 @@
     height: auto;
     margin: 0 0 1.5rem 0;
   }
-  #hero-1621 .cs-h3 {
+  #hero-1621 .cs-h2 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
     line-height: 1.2em;
