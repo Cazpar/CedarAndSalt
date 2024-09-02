@@ -61,7 +61,7 @@ order: 100
             {% endif %}
         }
         {% endif %}
-        {% if client.domain and page.url %},"url": "{{ client.domain }}{{ page.url }}"{% endif %}
+        {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}"{% endif %}
         {% if client.socials %},
         "sameAs": [{% for platform, url in client.socials %}
             {% if not loop.first %},{% endif %}
