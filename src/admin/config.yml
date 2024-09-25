@@ -1,32 +1,512 @@
 backend:
-    name: git-gateway
-    branch: main
+  name: git-gateway
+  branch: main
 
 local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://codestitch.app/frontend/images/logo.png
+logo_url: "https://cedarandsaltgardens.com/assets/images/Logo.svg"
 
-media_folder: "src/assets/images/blog"
-public_folder: "/assets/images/blog"
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
 
 collections:
-    - name: "blog"
-      label: "Blog"
-      folder: "src/content/blog"
-      create: true
-      slug: "{{slug}}"
-      fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-                label: "URL Slug",
-                name: "url",
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "URL Slug",
+          name: "url",
+          widget: "string",
+          hint: 'Specify where the page will be written to. If you use "Blog Post", the post will be accessible from "blog/blog-post"',
+        }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "hero"
+    label: "Home / Hero"
+    folder: "src/content/hero"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "Plan for native future",
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Restorative strategies and practices for thriving landscapes and gardens",
+        }
+      - {
+          label: "Button Text",
+          name: "buttonText",
+          widget: "string",
+          default: "Get started",
+        }
+      - {
+          label: "Service 1 title",
+          name: "service1Title",
+          widget: "string",
+          default: "Landscape & Garden design and strategy",
+        }
+      - {
+          label: "Service 1 text",
+          name: "service1Text",
+          widget: "markdown",
+          default: "We offer bespoke landscape and garden design services that cater to your specific needs. Collaborate with us to develop a plan that reflects your lifestyle and fits within your budget.",
+        }
+      - {
+          label: "Service 2 title",
+          name: "service2Title",
+          widget: "string",
+          default: "Native plants, well-behaving specimen plants of interest",
+        }
+      - {
+          label: "Service 2 text",
+          name: "service2Text",
+          widget: "markdown",
+          default: "Our expertise lies in selecting native and distinctive specimen plants. We'll guide you in choosing the perfect plants to enhance the beauty and functionality of your garden.",
+        }
+      - {
+          label: "Service 3 title",
+          name: "service3Title",
+          widget: "string",
+          default: "Removal of invasive plant species",
+        }
+      - {
+          label: "Service 3 text",
+          name: "service3Text",
+          widget: "markdown",
+          default: "We provide expert removal services for invasive plant species. Trust us to identify and eradicate these unwanted plants, restoring balance and health to your landscape.",
+        }
+      - {
+          label: "Service 4 title",
+          name: "service4Title",
+          widget: "string",
+          default: "Landscape value and beauty enhancement",
+        }
+      - {
+          label: "Service 4 text",
+          name: "service4Text",
+          widget: "markdown",
+          default: "Our services are dedicated to boosting the value and visual appeal of your landscape. Let us help you transform your garden into a stunning and valuable asset.",
+        }
+      - { label: "Mobile Image", name: "mobileImage", widget: "image" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+  - name: "about"
+    label: "Home / First about"
+    folder: "src/content/about"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Ethical Landscapes for Future Generations",
+        }
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "About us",
+        }
+      - {
+          label: "Text",
+          name: "text",
+          widget: "markdown",
+          default:
+            "At Cedar and Salt, we harmonize landscape aesthetics with the needs of the
+            earth and its inhabitants of all species.  We work in a spirit of
+            collaboration and respect with clients to help them create a lasting beauty
+            that they can enjoy, and that has value and impact beyond their lifetime.",
+        }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "Cedar and Salt Landscape and Gardens was founded upon these principles:",
+        }
+      - {
+          label: "List Items",
+          name: "listItems",
+          widget: "list",
+          field: { label: "Item", name: "item", widget: "string" },
+        }
+      - {
+          label: "Button Text",
+          name: "buttonText",
+          widget: "string",
+          default: "More about us",
+        }
+      - { label: "Mobile Image", name: "mobileImage", widget: "image" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+  - name: "gallery"
+    label: "Home / Gallery"
+    folder: "src/content/gallery"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "Gallery",
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "See Our Gallery",
+        }
+      - {
+          label: "Text",
+          name: "text",
+          widget: "markdown",
+          default: "Our gallery showcases some of the beautiful landscapes and gardens we have created for our clients. We hope you enjoy these images and find inspiration for your own project.",
+        }
+      - {
+          label: "Button Text",
+          name: "buttonText",
+          widget: "string",
+          default: "Discover more",
+        }
+      - { label: "Mobile Image 1", name: "mobileImage1", widget: "image" }
+      - { label: "Image1", name: "image1", widget: "image" }
+      - { label: "Image Alt 1", name: "imageAlt1", widget: "string" }
+      - { label: "Mobile Image2", name: "mobileImage2", widget: "image" }
+      - { label: "Image2", name: "image2", widget: "image" }
+      - { label: "Image Alt 2", name: "imageAlt2", widget: "string" }
+      - { label: "Mobile Image 3", name: "mobileImage3", widget: "image" }
+      - { label: "Image 3", name: "image3", widget: "image" }
+      - { label: "Image Alt 3", name: "imageAlt3", widget: "string" }
+      - { label: "Mobile Image 4", name: "mobileImage4", widget: "image" }
+      - { label: "Image 4", name: "image4", widget: "image" }
+      - { label: "Image Alt 4", name: "imageAlt4", widget: "string" }
+      - { label: "Mobile Image 5", name: "mobileImage5", widget: "image" }
+      - { label: "Image 5", name: "image5", widget: "image" }
+      - { label: "Image Alt 5", name: "imageAlt5", widget: "string" }
+  - name: "about2"
+    label: "Home / Second about"
+    folder: "src/content/about2"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "About us",
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "About the founder",
+        }
+      - {
+          label: "Text 1",
+          name: "text1",
+          widget: "markdown",
+          default: "Kiara McLaughlin has always felt a deep connection to Cedar trees, the Nootka Rose, Magnolia Blossoms and Lavender. The Cedar of Lebanon the “tree of her heart.” Being in the PNW, she enjoys the abundance of the Western Red Cedar trees as they are close. She also respects the natural beings and has always been keenly aware of the joy experienced with deep connection with the natural world and celebrates the abundance of growing research regarding the benefits nature has upon overall human health and well-being.",
+        }
+      - {
+          label: "Text 2",
+          name: "text2",
+          widget: "markdown",
+          default: "Her passion is sharing this connection of benefits and knowledge she has acquired from years of learning the best practices in harmonious, sustainable landscaping and gardening. Her vision of Cedar & Salt is grounded in this passion and the guiding principles through which the company stands for.",
+        }
+      - {
+          label: "Button Text",
+          name: "buttonText",
+          widget: "string",
+          default: "More about us",
+        }
+      - { label: "Mobile Image 1", name: "mobileImage1", widget: "image" }
+      - { label: "Image 1", name: "image1", widget: "image" }
+      - { label: "Image Alt 1", name: "imageAlt1", widget: "string" }
+      - { label: "Mobile Image 2", name: "mobileImage2", widget: "image" }
+      - { label: "Image 2", name: "image2", widget: "image" }
+      - { label: "Image Alt 2", name: "imageAlt2", widget: "string" }
+  - name: "cta"
+    label: "Call to Action"
+    folder: "src/content/cta"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "Contact",
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Give Us A Call!",
+        }
+      - {
+          label: "Text",
+          name: "text",
+          widget: "string",
+          default: "We are here to help you with all your needs. Contact us today to get started.",
+        }
+      - {
+          label: "Button Text",
+          name: "buttontext",
+          widget: "markdown",
+          default: "Contact Us!",
+        }
+  - name: "sidebyside1"
+    label: "About / First about"
+    folder: "src/content/aboutus/about"
+    create: false
+    delete: false
+    fields:
+      - { label: "Mobile Image 1", name: "mobileImage1", widget: "image" }
+      - { label: "Image 1", name: "image1", widget: "image" }
+      - { label: "Image Alt 1", name: "imageAlt1", widget: "string" }
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "About Cedar and Salt",
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Our Vision for a Thriving Future",
+        }
+      - {
+          label: "Text 1",
+          name: "text1",
+          widget: "markdown",
+          default: "Here at Cedar & Salt, we believe that harmony can be achieved through respectful, compassionate listening, strategizing in a collaborative spirit, and co-creating beautiful landscapes and gardens that will thrive without unnecessary costs or stress. We remain grounded in the respecting the perpetual value of visually alluring landscapes and gardens from the joy and well-being benefits they provide, and the increased value of the property. We have done the research long enough to know that both these values can be achieved while working with the native landscape and our clients’ needs and desires. ",
+        }
+      - {
+          label: "Text 2",
+          name: "text2",
+          widget: "markdown",
+          default: "We look forward to creating with you the ideal vision, strategizing a plan that addresses all needs, and implementing that plan with enthusiasm and in a spirit of meaningful purpose that makes for an exceptional journey and enjoyable experience as we “grow” your vision into reality.",
+        }
+      - {
+          label: "Text 3",
+          name: "text3",
+          widget: "markdown",
+          default: "In our commitment to helping create a more just, naturally thriving, regenerative and peaceful planet, Cedar & Salt is driven to help community by supporting organizations and missions that align with our core principle. We partner with organizations through sharing our knowledge and experiences, volunteering our time and resources towards specific projects that ensure that all have access to the benefits and knowledge of landscape and gardening, and educate about the importance of creating a more harmonious relationship with the natural world by working with it, not against it – working with each other, rather than against each other. We also believe in empowering the wise voices of Indigenous People and Women as part of this vision towards a more just, balanced, naturally regenerative and peaceful planet. ",
+        }
+      - {
+          label: "Title 2",
+          name: "title2",
+          widget: "string",
+          default: "Our Core Principles",
+        }
+      - {
+          label: "List Items",
+          name: "listItems",
+          widget: "list",
+          field: { label: "Item", name: "item", widget: "string" },
+        }
+      - {
+          label: "Text 4",
+          name: "text4",
+          widget: "markdown",
+          default: "These principles guide our “why” in everything we do. With Cedar & Salt, you have a team of passionate, dedicated people committed to working in harmony with you, to work with you to achieve the ideal goals in a balanced approach designed to meet your needs and harmonize with the natural land for a long-term strategy that thrives, and most importantly can sustain. This approach assures Cedar & Salt clients longevity of a thriving landscape and garden that is harmonious with the natural surroundings, leading to sensible savings and lower maintenance over time.",
+        }
+  - name: "sidebyside2"
+    label: "About / Second about"
+    folder: "src/content/aboutus/about2"
+    create: false
+    delete: false
+    fields:
+      - { label: "Mobile Image 1", name: "mobileImage1", widget: "image" }
+      - { label: "Image 1", name: "image1", widget: "image" }
+      - { label: "Image Alt 1", name: "imageAlt1", widget: "string" }
+      - { label: "Mobile Image 2", name: "mobileImage2", widget: "image" }
+      - { label: "Image 2", name: "image2", widget: "image" }
+      - { label: "Image Alt 2", name: "imageAlt2", widget: "string" }
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "About the founder",
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Kiara McLaughlin",
+        }
+      - {
+          label: "Text 1",
+          name: "text1",
+          widget: "markdown",
+          default: "The heart of any true gardener, whether they work in obscurity at home, have a position in a successful company or a teaching post, has a vision that sees into a hopeful future when they plant a seed in the soil.",
+        }
+      - {
+          label: "Text 2",
+          name: "text2",
+          widget: "markdown",
+          default: "Kiara was born and raised in the Pacific Northwest. She has been gardening since 2005, when she signed up for her first community garden space in Missoula, Montana. Since then, she has worked in landscaping in Missoula, Bellingham, Washington, Lopez and San Juan Islands.",
+        }
+      - {
+          label: "Text 3",
+          name: "text3",
+          widget: "markdown",
+          default: "Kiara’s concern about native plants and invasive species began while she was literally working “on the ground” and noticing certain plants were outcompeting natives and watching them reproduce at alarming rates. She started to see how difficult some are to remove once established, like English ivy or Shasta daisy. She has been in conversation with the San Juan County Weed Control Board, San Juan County Public Works, the Washington State University Extension Office and local garden supply stores, seeking to increase awareness of what they are selling the unsuspecting home gardener.",
+        }
+      - {
+          label: "Text 4",
+          name: "text4",
+          widget: "markdown",
+          default: "Her passion is sharing the knowledge she has acquired from years of learning the best practices in harmonious, sustainable landscaping and gardening. Her vision of Cedar & Salt is grounded in this passion and the guiding principles for which the company stands.",
+        }
+      - {
+          label: "Text 5",
+          name: "text5",
+          widget: "markdown",
+          default: "Kiara has always felt a deep connection to the evergreen genus Cedrus, or the “true” cedars, of which there are only three species in the world. The Cedar of Lebanon is the chosen artwork for the company, which was drawn by artist and creative collaborator Pamela Hoke. You can find her work here: https://pamelahoke.com/",
+        }
+  - name: "Logos"
+    label: "About / Logos"
+    folder: "src/content/aboutus/logos"
+    create: false
+    delete: false
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Our Partners",
+        }
+      - {
+          label: "Text 1",
+          name: "text1",
+          widget: "markdown",
+          default: "We are a socially conscious organization. We believe in participating in the solution! Cedar and Salt supports recovery and reeducation for victims of human trafficking, environmental organizations of good repute, and the rights of domesticated and wild animals.",
+        }
+      - {
+          label: "Text 2",
+          name: "text2",
+          widget: "markdown",
+          default: "We encourage awareness of best practices regarding control and disposal of invasive plant species, and how to respectfully and responsibly interact with the natural world. We are motivated to participate in restorative justice, and build bridges by reaching beyond the old, racially motivated paradigms that have limited our understanding of other perspectives, such as Indigenous People, who engaged in practices that successfully preserved the land for thousands of years.",
+        }
+      - {
+          label: "Images",
+          name: "images",
+          widget: "list",
+          fields:
+            [
+              { label: "Image", name: "image", widget: "image" },
+              { label: "Image Alt", name: "imageAlt", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+            ],
+        }
+  - name: "services_gallery"
+    label: "Services / Gallery"
+    folder: "src/content/services/gallery"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Our Gallery",
+        }
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "Portfolio",
+        }
+      - {
+          label: "Gallery Images",
+          name: "gallery_images",
+          widget: "list",
+          fields:
+            [
+              { label: "Mobile Image", name: "mobile_image", widget: "image" },
+              {
+                label: "Desktop Image",
+                name: "desktop_image",
+                widget: "image",
+              },
+              { label: "Image Alt", name: "image_alt", widget: "string" },
+            ],
+          max: 11,
+          min: 1,
+        }
+  - name: "services"
+    label: "Services / Services List"
+    folder: "src/content/services/services"
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Topper",
+          name: "topper",
+          widget: "string",
+          default: "Services",
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "Landscape & Garden Services in Friday Harbor, WA, USA",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          default: "Here are four of our most popular services. We offer a wide range of services, so if you don't see what you're looking for, please contact us.",
+        }
+      - {
+          label: "Services List",
+          name: "services_list",
+          widget: "list",
+          fields:
+            [
+              {
+                label: "Service Title",
+                name: "service_title",
                 widget: "string",
-                hint: 'Specify where the page will be written to. If you use "Blog Post", the post will be accessible from "blog/blog-post"',
-            }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Author", name: "author", widget: "string" }
-          - { label: "Date", name: "date", widget: "datetime" }
-          - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-          - { label: "Featured Image", name: "image", widget: "image" }
-          - { label: "Image Caption", name: "imageAlt", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+              },
+              {
+                label: "Service Description",
+                name: "service_description",
+                widget: "markdown",
+              },
+              { label: "Mobile Image", name: "mobile_image", widget: "image" },
+              {
+                label: "Desktop Image",
+                name: "desktop_image",
+                widget: "image",
+              },
+              { label: "Image Alt", name: "image_alt", widget: "string" },
+            ],
+          max: 4,
+          min: 1,
+        }

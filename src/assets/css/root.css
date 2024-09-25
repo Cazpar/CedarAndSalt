@@ -77,7 +77,7 @@
     text-align: center;
   }
   .cs-button-solid:hover {
-    color: var(--primary);
+    color: var(--bodyTextColorBlack);
   }
   .cs-button-solid:hover:before {
     width: 100%;

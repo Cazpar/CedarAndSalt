@@ -37,152 +37,75 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--                   Gallery                    -->
 <!-- ============================================ -->
-
+{% set imageDimensions = [
+    { "width": 424, "height": 190 },
+    { "width": 571, "height": 390 },
+    { "width": 268, "height": 190 },
+    { "width": 268, "height": 190 },
+    { "width": 268, "height": 390 },
+    { "width": 425, "height": 390 },
+    { "width": 273, "height": 190 },
+    { "width": 273, "height": 190 },
+    { "width": 268, "height": 390 },
+    { "width": 268, "height": 390 },
+    { "width": 268, "height": 190 }
+  ] %}
+{% for item in collections.services_gallery %}
+{% if item.data.title == "Our Gallery" %}
 <section id="gallery-434">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Portfolio</span>
-            <h2 class="cs-title">Our Gallery</h2>
+            <span class="cs-topper">{{item.data.topper}}</span>
+            <h2 class="cs-title">{{item.data.title}}</h2>
             </div>
         <div class="cs-grid">
-            <!--In order from top left to top right, then bottom left to bototm right-->
-            <!--Picture 1-->
-            <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1020_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1020.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1020.webp" alt="gallery image" width="424" height="190">
+            {% for image in item.data.gallery_images %}
+            {% set dimensions = imageDimensions[loop.index0] %}
+            <picture class="cs-picture cs-picture{{loop.index}}">
+                <source media="(max-width: 600px)" srcset="{{image.mobile_image}}">
+                <source media="(min-width: 601px)" srcset="{{image.desktop_image}}">
+                <img loading="lazy" decoding="async" src="{{image.desktop_image}}" alt="{{image.image_alt}}" width="{{ dimensions.width }}" height="{{ dimensions.height }}">
             </picture>
-            <!--Picture 2-->
-            <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/stairs-m.jpg">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/stairs-scaled.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/stairs-scaled.webp" alt="gallery image" width="571" height="390">
-            </picture>
-            <!--Picture 3-->
-            <picture class="cs-picture cs-picture3">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1013_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1013.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1013.webp" alt="gallery image" width="268" height="190">
-            </picture>
-            <!--Picture 4-->
-            <picture class="cs-picture cs-picture4">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1061_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1061.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1061.webp" alt="gallery image" width="268" height="190">
-            </picture>
-            <!--Picture 5-->
-            <picture class="cs-picture cs-picture5">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1800_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1800.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1800.webp" alt="gallery image" width="268" height="390">
-            </picture>
-            <!--Picture 6-->
-            <picture class="cs-picture cs-picture6">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1887_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1887.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1887.webp" alt="gallery image" width="425" height="390">
-            </picture>
-            <!--Picture 7-->
-            <picture class="cs-picture cs-picture7">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/bee_lavender_m.jpg">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/bee_lavender.jpg">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/bee_lavender.jpg" alt="gallery image" width="273" height="190">
-            </picture>
-            <!--Picture 8-->
-            <picture class="cs-picture cs-picture8">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/bee_m.jpg">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/bee.jpg">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/bee.jpg" alt="gallery image" width="273" height="190">
-            </picture>
-            <!--Picture 9-->
-            <picture class="cs-picture cs-picture9">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1020_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1020.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1020.webp" alt="gallery image" width="268" height="390">
-            </picture>
-            <!--Picture 10-->
-            <picture class="cs-picture cs-picture10">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1020_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1020.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1020.webp" alt="gallery image" width="268" height="390">
-            </picture>
-            <!--Picture 11-->
-            <picture class="cs-picture cs-picture11">
-                <source media="(max-width: 600px)" srcset="../../assets/images/mobile-cropped-compressed/IMG_1020_m.webp">
-                <source media="(min-width: 601px)" srcset="../../assets/images/desktop-final/IMG_1020.webp">
-                <img loading="lazy" decoding="async" src="../../assets/images/desktop-final/IMG_1020.webp" alt="gallery image" width="268" height="190">
-            </picture>
+            {% endfor %}
         </div>
     </div>
 </section>
-
+{% endif %}
+{% endfor %}
 <!-- ============================================ -->
 <!--                  Services                    -->
 <!-- ============================================ -->
-
+{% for item in collections.services %}
+{% if item.data.title == "Landscape & Garden Services in Friday Harbor, WA, USA" %}
 <section id="services-447">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Services</span>
-            <h2 class="cs-title">Landscape & Garden Services in Friday Harbor, WA, USA</h2>
+            <span class="cs-topper">{{ item.data.topper }}</span>
+            <h2 class="cs-title">{{item.data.title}}</h2>
             <p class="cs-text">
-                Here are four of our most popular services. We offer a wide range of services, so if you don't see what you're looking for, please contact us.
+                {{ item.data.description}}
             </p>
         </div>
         <ul class="cs-card-group">
+            {% for service in item.data.services_list %}
             <li class="cs-item">
                 <div class="cs-box">
-                    <h3 class="cs-h3">Landscape & Garden design and strategy </h3>
-                    <p class="cs-item-text">Our landscape & garden design and strategy services are tailored to your needs. We work with you to create a plan that suits your lifestyle and budget.
+                    <h3 class="cs-h3">{{service.service_title}} </h3>
+                    <p class="cs-item-text">{{service.service_description}}
                     </p>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaf.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaf.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaf.jpg" alt="leaf" width="345" height="428">
+                    <source media="(max-width: 600px)" srcset="{{service.mobile_image}}">
+                    <source media="(min-width: 601px)" srcset="{{service.desktop_image}}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{{service.desktop_image}}" alt="{{service.image_alt}}" width="345" height="428">
                 </picture>
             </li>
-            <li class="cs-item">
-                <div class="cs-box">
-                    <h3 class="cs-h3">Native plants, well-behaving specimen plants of interest</h3>
-                    <p class="cs-item-text">
-                        We specialize in native plants, well-behaving specimen plants of interest. We can help you choose the right plants for your garden and landscape.
-                    </p>
-                </div>
-                <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/grass.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/grass.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/grass.jpg" alt="grass" width="345" height="428">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-box">
-                    <h3 class="cs-h3">Removal of invasive plant species</h3>
-                    <p class="cs-item-text">
-                        We specialize in the removal of invasive plant species. We can help you identify and remove invasive plants from your garden and landscape.
-                    </p>
-                </div>
-                <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaves.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaves.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/leaves.jpg" alt="leaves" width="345" height="428">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-box">
-                    <h3 class="cs-h3">Landscape value and beauty enhancement</h3>
-                    <p class="cs-item-text">
-                        We specialize in landscape value and beauty enhancement. We can help you improve the value and beauty of your garden and landscape.
-                    </p>
-                </div>
-                <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/path.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/path.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/path.jpg" alt="path" width="345" height="428">
-                </picture>
-            </li>
+            {% endfor %}
         </ul>
     </div>
 </section>
-                                
+{% endif %}
+{% endfor %}
+
+{% include 'components/cta.html' %}
 {% endblock %}

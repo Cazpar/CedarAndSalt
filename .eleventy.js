@@ -119,6 +119,43 @@ module.exports = function (eleventyConfig) {
                               END SERVER SETTINGS
     =======================================================================*/
 
+    eleventyConfig.addCollection("about", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/about/*.md");
+      });
+    
+    eleventyConfig.addCollection("hero", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/hero/*.md");
+    });
+
+    eleventyConfig.addCollection("gallery", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/gallery/*.md");
+    });
+
+    eleventyConfig.addCollection("about2", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/about2/*.md");
+    });
+
+    eleventyConfig.addCollection("cta", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/cta/*.md");
+    });
+
+    eleventyConfig.addCollection("sidebyside1", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/aboutus/about/*.md");
+    });
+
+    eleventyConfig.addCollection("sidebyside2", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/aboutus/about2/*.md");
+    });
+    eleventyConfig.addCollection("logos", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/aboutus/logos/*.md");
+    });
+    eleventyConfig.addCollection("services_gallery", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/services/gallery/*.md");
+    });
+    eleventyConfig.addCollection("services", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/services/services/*.md");
+    });
+
     return {
         dir: {
             input: "src",

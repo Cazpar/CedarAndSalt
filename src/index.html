@@ -76,7 +76,8 @@ order: 100
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
-
+{% for item in collections.hero %}
+{% if item.data.title == "Restorative strategies and practices for thriving landscapes and gardens" %}
 <section id="hero-1621">
     <div class="cs-container">
         <div class="cs-content">
@@ -104,7 +105,7 @@ order: 100
                             fill="var(--chevronColor)" />
                     </g>
                 </svg>
-                Plan for native future
+                {{ item.data.topper }}
                 <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.7">
@@ -130,34 +131,34 @@ order: 100
                 </svg>
             </span>
             <h1 class="cs-title">
-                Restorative strategies and practices for thriving landscapes and gardens</h1>
-            <a href="/contact" class="cs-button-solid">Get started</a>
+                {{ item.data.title }}</h1>
+            <a href="/contact" class="cs-button-solid">{{ item.data.buttonText }}</a>
             <!--Bottom Corners-->
             <div class="cs-corners" aria-hidden="true"></div>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <h2 class="cs-h2">Landscape & Garden design and strategy</h2>
+                <h2 class="cs-h2">{{ item.data.service1Title }}</h2>
                 <p class="cs-item-text">
-                    We offer bespoke landscape and garden design services that cater to your specific needs. Collaborate with us to develop a plan that reflects your lifestyle and fits within your budget.
+                    {{ item.data.service1Text }}
                 </p>
             </li>
             <li class="cs-item">
-                <h2 class="cs-h2">Native plants, well-behaving specimen plants of interest</h2>
+                <h2 class="cs-h2">{{ item.data.service2Title }}</h2>
                 <p class="cs-item-text">
-                    Our expertise lies in selecting native and distinctive specimen plants. We'll guide you in choosing the perfect plants to enhance the beauty and functionality of your garden.
+                    {{ item.data.service2Text }}
                 </p>
             </li>
             <li class="cs-item">
-                <h2 class="cs-h2">Removal of invasive plant species</h2>
+                <h2 class="cs-h2">{{ item.data.service3Title }}</h2>
                 <p class="cs-item-text">
-                    We provide expert removal services for invasive plant species. Trust us to identify and eradicate these unwanted plants, restoring balance and health to your landscape.
+                    {{ item.data.service3Text }}
                 </p>
             </li>
             <li class="cs-item">
-                <h2 class="cs-h2">Landscape value and beauty enhancement</h2>
+                <h2 class="cs-h2">{{ item.data.service4Title }}</h2>
                 <p class="cs-item-text">
-                    Our services are dedicated to boosting the value and visual appeal of your landscape. Let us help you transform your garden into a stunning and valuable asset.
+                    {{ item.data.service4Text }}
                 </p>
             </li>
         </ul>
@@ -166,138 +167,145 @@ order: 100
     <!-- Background Image -->
     <picture class="cs-background">
         <source media="(max-width: 600px)"
-            srcset="assets/images/mobile-cropped-compressed/landing-m.jpg">
+            srcset="{{ item.data.mobileImage }}">
         <source media="(min-width: 601px)"
-            srcset="assets/images/desktop-final/landing.webp">
+            srcset="{{ item.data.image }}">
         <img decoding="async"
-            src="assets/images/desktop-final/landing.webp" alt="meeting" width="1920"
+            src="{{ item.data.image }}" alt="{{ item.data.imageAlt }}" width="1920"
             height="1200" aria-hidden="true">
     </picture>
 </section>
+{% endif %}
+{% endfor %}
 <!-- ============================================ -->
 <!--                Side by Side                  -->
 <!-- ============================================ -->
 
+{% for item in collections.about %}
+{% if item.data.title == "Ethical Landscapes for Future Generations" %}
 <section id="sbs-1883">
     <div class="cs-container">
         <div class="cs-content">
             <div class="cs-flex">
-                <span class="cs-topper">About us</span>
-                <h2 class="cs-title">Ethical Landscapes for Future Generations</h2>
+                <span class="cs-topper">{{ item.data.topper }}</span>
+                <h2 class="cs-title">{{  item.data.heading }}</h2>
             </div>
             <p class="cs-text-large">
-                At Cedar and Salt, we harmonize landscape aesthetics with the needs of the earth and its inhabitants of all species.  We work in a spirit of collaboration and respect with clients to help them create a lasting beauty that they can enjoy, and that has value and impact beyond their lifetime.
+                {{ item.data.text }}
             </p>
             <p class="cs-text-large">
-                Cedar and Salt Landscape and Gardens was founded upon these principles:
+                {{ item.data.heading}}
             </p>
             <ul class="cs-ul">
+                {% for listItem in item.data.listItems %}
                 <li class="cs-li">
-                    We have a responsibility to the planet and to future generations to practice restorative, ethical landscaping and planting.
+                    {{ listItem }}
                 </li>
-                <li class="cs-li">
-                    Partnering with private citizens, government agencies and organizations to find solutions for our shared environment ensures that together we will have greater impact than if we operate in isolation.
-                </li>
-                <li class="cs-li">
-                    When we restore and create beautiful landscapes and urban plantings, we contribute to a more peaceful world.
-                </li>
+                {% endfor %}
             </ul>
-            <a href="/about" class="cs-button-solid">More about us</a>
+            <a href="/about" class="cs-button-solid">{{ item.data.buttonText }}</a>
         </div>
         <div class="cs-image-group">
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/home_about_m.webp">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage }}">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/home_about.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/home_about.webp" alt="dermatologist" width="324" height="467">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image }}" alt="{{ item.data.imageAlt }}" width="324" height="467">
             </picture>
         </div>
     </div>
 </section>
-
+{% endif %}
+{% endfor %}
 <!-- ============================================ -->
 <!--                  Gallery                     -->
 <!-- ============================================ -->
-
+{% for item in collections.gallery %}
+{% if item.data.title == "See Our Gallery" %}
 <section id="gallery-483">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Gallery</span>
-            <h2 class="cs-title">See Our Gallery Collections</h2>
+            <span class="cs-topper">{{ item.data.topper }}</span>
+            <h2 class="cs-title">{{ item.data.title }}</h2>
             <p class="cs-text">
-                Our gallery showcases some of the beautiful landscapes and gardens we have created for our clients. We hope you enjoy these images and find inspiration for your own project.
+                {{ item.data.text }}
             </p>
             <a href="/services" class="cs-cta">
                 <!--Arrow Right-->
                 <svg class="cs-arrow" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path fill="#FAFBFC" d="M24.55 31.367c-.317 0-.633-.117-.883-.367a1.258 1.258 0 0 1 0-1.767L32.9 20l-9.233-9.233a1.258 1.258 0 0 1 0-1.767 1.258 1.258 0 0 1 1.766 0L35.55 19.117a1.258 1.258 0 0 1 0 1.766L25.433 31c-.25.25-.566.367-.883.367Z"/><path fill="#FAFBFC" d="M34.383 21.25H6.333A1.26 1.26 0 0 1 5.083 20c0-.683.567-1.25 1.25-1.25h28.05c.684 0 1.25.567 1.25 1.25a1.26 1.26 0 0 1-1.25 1.25Z"/></svg>
                 <!--Wrapped in a span so it can be animated-->
-                <span class="cs-cta-text">Discover<br> More</span>
+                <span class="cs-cta-text">{{ item.data.buttonText }}</span>
             </a>
             <picture class="cs-content-picture">
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/IMG_1020_m.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/IMG_1020.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/IMG_1020.webp" alt="yard" width="630" height="532">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage1 }}">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image1 }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image1 }}" alt="{{ item.data.imageAlt1 }}" width="630" height="532">
             </picture>
         </div>
         <div class="cs-grid">
             <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/IMG_1061_m.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/IMG_1061.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/IMG_1061.webp" alt="yard" width="305" height="522">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage2 }}">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image2 }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image2 }}" alt="{{ item.data.imageAlt2 }}" width="305" height="522">
             </picture>
             <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/IMG_1013_m.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/IMG_1013.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/IMG_1013.webp" alt="yard" width="305" height="348">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage3 }}">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image3 }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image3 }}" alt="{{ item.data.imageAlt3 }}" width="305" height="348">
             </picture>
             <picture class="cs-picture cs-picture3">
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/IMG_1800_m.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/IMG_1800.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/IMG_1800.webp" alt="yard" width="305" height="387">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage4 }}">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image4 }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image4 }}" alt="{{ item.data.imageAlt4 }}" width="305" height="387">
             </picture>
             <picture class="cs-picture cs-picture4">
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/IMG_1887_m.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/IMG_1887.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/IMG_1887.webp" alt="yard" width="305" height="483">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage5 }}">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image5 }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image5 }}" alt="{{ item.data.imageAlt5 }}" width="305" height="483">
             </picture>
         </div>
     </div>
 </section>
+{% endif %}
+{% endfor %}
 
 <!-- ============================================ -->
 <!--                 Side By Side                 -->
 <!-- ============================================ -->
-
+{% for item in collections.about2 %}
+{% if item.data.title == "About the founder" %}
 <section id="sbs-1014">
     <div class="cs-container">
         <!-- Left Image Section -->
         <div class="cs-image-group">
             <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/home_r_about_m.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/home_r_about.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/home_r_about.webp" alt="breakfast" width="522" height="581" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage1 }}">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image1 }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image1 }}" alt="{{ item.data.imageAlt1 }}" width="522" height="581" aria-hidden="true">
             </picture>
             <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="assets/images/mobile-cropped-compressed/home_r2_about_m.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/desktop-final/home_r2_about.webp">
-                <img loading="lazy" decoding="async" src="assets/images/desktop-final/home_r2_about.webp" alt="breakfast" width="414" height="400" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{{ item.data.mobileImage2 }}">
+                <source media="(min-width: 601px)" srcset="{{ item.data.image2 }}">
+                <img loading="lazy" decoding="async" src="{{ item.data.image2 }}" alt="{{ item.data.imageAlt2 }}" width="414" height="400" aria-hidden="true">
             </picture>
         </div>
         <!-- Right Content Section-->
         <div class="cs-content">
-            <span class="cs-topper">About us</span>
-            <h2 class="cs-title">About the founder</h2>
+            <span class="cs-topper">{{ item.data.topper }}</span>
+            <h2 class="cs-title">{{ item.data.title }}</h2>
             <p class="cs-text">
-                Kiara McLaughlin has always felt a deep connection to Cedar trees, the Nootka Rose, Magnolia Blossoms and Lavender. The Cedar of Lebanon the “tree of her heart.” Being in the PNW, she enjoys the abundance of the Western Red Cedar trees as they are close. She also respects the natural beings and has always been keenly aware of the joy experienced with deep connection with the natural world and celebrates the abundance of growing research regarding the benefits nature has upon overall human health and well-being.
+                {{ item.data.text1 }}
             </p>
             <p class="cs-text">
-                Her passion is sharing this connection of benefits and knowledge she has acquired from years of learning the best practices in harmonious, sustainable landscaping and gardening. Her vision of Cedar & Salt is grounded in this passion and the guiding principles through which the company stands for.
+                {{ item.data.text2 }}
             </p>
-            <a href="/about" class="cs-button-solid">More about us</a>
+            <a href="/about" class="cs-button-solid">{{ item.data.buttonText }}</a>
         </div>
     </div>
 </section>
+{% endif %}
+{% endfor %}
 
 {% include 'components/cta.html' %}
 {% endblock %}
