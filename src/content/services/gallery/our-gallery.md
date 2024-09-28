@@ -32,7 +32,7 @@ gallery_images:
   - mobile_image: /assets/images/contact_m.jpg
     desktop_image: /assets/images/contact.jpg
     image_alt: Pathway
-  - mobile_image: /assets/images/img_1013_m.webp
-    desktop_image: /assets/images/img_1013.webp
-    image_alt: BEEEEEEEEEEEEEEEEEEE
+  - mobile_image: /assets/images/img_0525-1-.jpg
+    desktop_image: /assets/images/img_0525-1-.jpg
+    image_alt: Cats on hot tub
 ---
