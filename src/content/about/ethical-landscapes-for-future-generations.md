@@ -8,7 +8,7 @@ text: At Cedar and Salt, we harmonize landscape aesthetics with the needs of the
 heading: "Cedar and Salt Landscape and Gardens was founded upon these principles:"
 listItems:
   - We have a responsibility to the planet and to future generations to practice
-    restorative, ethical landscaping and planting.
+    restorative, ethical landscaping and cultivation.
   - Partnering with private citizens, government agencies and organizations to
     find solutions for our shared environment ensures that together we will have
     greater impact than if we operate in isolation.
@@ -16,6 +16,6 @@ listItems:
     contribute to a more peaceful world.
 buttonText: More about us
 mobileImage: /assets/images/home_about_m.jpg
-image: /assets/images/home_about.webp
+image: /assets/images/img_1061_m.webp
 imageAlt: Flower
 ---
